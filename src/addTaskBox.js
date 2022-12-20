@@ -1,15 +1,15 @@
 export default function addTaskBox() {
-  const taskBox = document.createElement('div');
-  taskBox.setAttribute('id', 'taskBox');
+  const addTaskBox = document.createElement('div');
+  addTaskBox.setAttribute('id', 'taskBox');
 
   const input = document.createElement('input');
   input.setAttribute('id', 'input');
   input.setAttribute('placeholder', 'ex: Go to Gym');
-  taskBox.appendChild(input);
+  addTaskBox.appendChild(input);
 
   const button = document.createElement('button');
   button.textContent = '➤';
-  taskBox.appendChild(button);
+  addTaskBox.appendChild(button);
 
-  return taskBox;
+  return addTaskBox;
 }
