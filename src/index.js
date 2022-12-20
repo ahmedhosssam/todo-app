@@ -7,9 +7,6 @@ document.body.appendChild(header());
 const content = document.createElement('div');
 content.setAttribute('id', 'content');
 
-const tasksContainer = document.createElement('div');
-tasksContainer.setAttribute('id', 'tasksContainer');
-
 content.appendChild(addTaskBox().addTaskBox);
 
 document.body.appendChild(content);
