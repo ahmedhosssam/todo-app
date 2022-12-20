@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #c7d2fe;
+}
+
+:root {
+  font-family: sans-serif;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #a5b4fc;
+  padding: 30px 0;
+  font-size: 40px;
+  font-weight: bold;
+  color: #312e81;
+  margin-bottom: 15px;
+}
