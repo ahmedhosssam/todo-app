@@ -39,6 +39,7 @@ header {
   border-radius: 15px;
   padding: 15px 5px;
   gap: 10px;
+  margin-bottom: 15px;
 }
 
 #input {
@@ -62,4 +63,27 @@ header {
 
 #taskBox > button:active {
   background-color: #4338ca;
+}
+
+.task {
+  background-color: white;
+  display: flex;
+  padding: 8px 15px;
+  align-items: center;
+  justify-content: flex-start;
+  width: 340px;
+  gap: 6px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.task > button:last-of-type {
+  margin-left: auto;
+}
+
+#tasksContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
