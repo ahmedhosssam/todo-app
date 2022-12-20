@@ -1,6 +1,7 @@
 import css from './style.css';
 import header from './header.js';
 import addTaskBox from './addTaskBox.js';
+import taskBox from './taskBox';
 
 document.body.appendChild(header());
 
