@@ -3,4 +3,9 @@ import header from './header.js';
 import addTaskBox from './addTaskBox.js';
 
 document.body.appendChild(header());
-document.body.appendChild(addTaskBox());
+
+const content = document.createElement('div');
+content.setAttribute('id', 'content');
+
+content.appendChild(addTaskBox());
+document.body.appendChild(content);
