@@ -13,6 +13,12 @@ export default function addTaskBox() {
   addTaskBox.appendChild(button);
 
   button.addEventListener('click', addNewTask);
+  input.addEventListener('keypress', (e) => {
+    // To make task added by Enter Key
+    if (e.key === 'Enter') {
+      addNewTask(e);
+    }
+  });
 
   return { addTaskBox, input, button };
 }
@@ -21,6 +27,7 @@ export const tasksContainer = document.createElement('div');
 tasksContainer.setAttribute('id', 'tasksContainer');
 
 function addNewTask(e) {
+  console.log(e.key);
   e.preventDefault();
 
   const taskBox = document.createElement('div');
