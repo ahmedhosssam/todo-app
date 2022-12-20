@@ -35,15 +35,31 @@ function addNewTask(e) {
   const taskName = document.createElement('p');
   taskName.textContent = input.value;
 
-  input.value = '';
-
   const remove = document.createElement('button');
   remove.textContent = '🗑️';
+  remove.setAttribute('id', input.value); // To Access it in removeTask()
+  taskBox.setAttribute('id', input.value); // To Access it in removeTask()
 
   taskBox.appendChild(checkBox);
   taskBox.appendChild(taskName);
   taskBox.appendChild(remove);
 
   tasksContainer.appendChild(taskBox);
+
+  if (input.value == '') {
+    alert('Add Something');
+    tasksContainer.removeChild(taskBox);
+  }
+
+  input.value = '';
+
   document.body.appendChild(tasksContainer);
+
+  remove.addEventListener('click', removeTask);
+}
+
+function removeTask(e) {
+  const taskID = e.target.id;
+  const task = document.querySelector(`#${taskID}`);
+  tasksContainer.removeChild(task);
 }
