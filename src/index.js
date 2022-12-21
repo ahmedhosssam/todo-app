@@ -1,12 +1,6 @@
 import css from './style.css';
-import header from './header.js';
 import addTaskBox from './addTaskBox.js';
 
-document.body.appendChild(header());
-
-const content = document.createElement('div');
-content.setAttribute('id', 'content');
+const content = document.getElementById('content');
 
 content.appendChild(addTaskBox().addTaskBox);
-
-document.body.appendChild(content);
